@@ -35,8 +35,8 @@ This repository contains KDE Plasma 6 configuration files for desktop appearance
 
 This repository contains **configuration references** to the following third-party themes. The actual theme assets are **NOT bundled** due to redistribution restrictions:
 
-- **Look-and-Feel Package**: [`Utterly-Nord`](https://store.kde.org/p/1266491/)
-- **Plasma Style (Desktop Theme)**: [`blackglass`](https://store.kde.org/p/1313929/)
+- **Look-and-Feel Package**: [`Utterly-Nord`](https://store.kde.org/p/2135625/)
+- **Plasma Style (Desktop Theme)**: [`blackglass`](https://store.kde.org/p/2143415/)
 - **Icon Theme**: `Breeze Dark` (typically part of `breeze-icons` package)
 - **Cursor Theme**: `Breeze Cursor` (default Plasma theme)
 
