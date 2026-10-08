@@ -19,7 +19,7 @@ This repository contains KDE Plasma 6 configuration files for desktop appearance
 - **Wallpaper**: Configured to use Aritim-Dark-Wallpaper-1920x1080.jpg (bundled in this repository)
 - **Appearance Settings**: 
   - Look-and-Feel: Utterly-Nord (referenced, not bundled)
-  - Plasma Style: blackglass (referenced, not bundled)
+  - Plasma Style: Breeze (referenced, not bundled)
   - Color Scheme: Derived from Utterly-Nord
   - Icon Theme: Breeze Dark
   - Cursor Theme: Breeze Cursor

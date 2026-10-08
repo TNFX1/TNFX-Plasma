@@ -16,3 +16,6 @@ Scale=1.15
 
 [org.kde.kdecoration2]
 library=org.kde.kwin.aurorae.v2
+
+[Compositing]
+Enabled=true

@@ -34,6 +34,7 @@ declare -a FILES=(
     "kwinrc"
     "plasma-org.kde.plasma.desktop-appletsrc"
     "kglobalshortcutsrc"
+    "kcminputrc"
     "gtk-3.0/settings.ini"
     "gtk-4.0/settings.ini"
     "user-dirs.dirs"
@@ -77,6 +78,11 @@ for file in "${FILES[@]}"; do
 done
 
 # Copy gtk directories (we already copied via FILES, but ensure)
+# Install bundled wallpaper
+echo "Installing bundled wallpaper..."
+mkdir -p "$LOCAL_SHARE_DIR/wallpapers"
+cp "$REPO_DIR/wallpapers/Aritim-Dark-Wallpaper-1920x1080.jpg" "$LOCAL_SHARE_DIR/wallpapers/"
+echo "Installed wallpaper: Aritim-Dark-Wallpaper-1920x1080.jpg"
 for gtkver in 3.0 4.0; do
     src="$REPO_DIR/config/gtk-$gtkver"
     dest="$CONFIG_DIR/gtk-$gtkver"
@@ -101,10 +107,11 @@ echo "1. Replace the ICC profile path in $CONFIG_DIR/kwinoutputconfig.json (if y
 echo "   Note: kwinoutputconfig.json was not included due to hardware specificity; configure your monitors manually."
 echo "2. Install the required themes:"
 echo "   - Look-and-Feel: Utterly-Nord (via KDE Store or package manager)"
-echo "   - Plasma Style: blackglass (or whatever you prefer)"
+echo "   - Plasma Style: Breeze (or your preferred theme)"
 echo "   - Icon Theme: breeze-dark (usually part of breeze-icons)"
 echo "   - Cursor Theme: breeze_cursors (or your preferred cursor theme)"
-echo "3. Add your wallpapers to $HOME/.local/share/wallpapers/"
-echo "4. Log out and log back in, or run: plasmashell --replace"
+echo "3. The bundled wallpaper is already installed in $HOME/.local/share/wallpapers/"
+echo "   Additional wallpapers can be added to $HOME/.local/share/wallpapers/"
+echo "4. Log out and log back in, or run: kglobalaccel --replace && plasmashell --replace"
 echo ""
 echo "To restore backup, copy files from $BACKUP_DIR back to $CONFIG_DIR"
