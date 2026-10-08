@@ -35,7 +35,7 @@ wallpaperplugin=org.kde.image
 
 [Containments][254][Applets][255]
 immutability=1
-plugin=org.kde.plasma.simplekickoff
+plugin=org.kde.plasma.kickoff
 
 [Containments][254][Applets][255][Configuration]
 popupHeight=441
@@ -56,29 +56,6 @@ global=Alt+F1
 
 [Containments][254][Applets][255][Shortcuts]
 global=Alt+F1
-
-[Containments][254][Applets][258]
-immutability=1
-plugin=org.kde.plasma.marginsseparator
-
-[Containments][254][Applets][259]
-immutability=1
-plugin=org.kde.windowtitle
-
-[Containments][254][Applets][259][Configuration][ConfigDialog]
-DialogHeight=630
-DialogWidth=810
-
-[Containments][254][Applets][259][Configuration][General]
-containmentType=Plasma
-filterActivityInfo=false
-filterByScreen=true
-italicFont=true
-showIcon=false
-
-[Containments][254][Applets][260]
-immutability=1
-plugin=org.kde.plasma.marginsseparator
 
 [Containments][254][Applets][261]
 immutability=1
@@ -232,7 +209,7 @@ knownItems=org.kde.kdeconnect,org.kde.plasma.bluetooth,org.kde.plasma.cameraindi
 shownItems=org.kde.plasma.weather,org.kde.plasma.battery
 
 [Containments][254][General]
-AppletOrder=255;258;259;260;261;262;263;264;265;266;267;268
+AppletOrder=255;261;262;263;264;265;266;267;268
 
 [Containments][281]
 activityId=
