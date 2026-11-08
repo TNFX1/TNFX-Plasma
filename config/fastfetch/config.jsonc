@@ -1,36 +1,40 @@
-// TNFX Nord: rounded box matching the starship prompt, based on fastfetch's Catnap-style example (presets/examples/13).
-// Colors are ANSI, so they follow kitty's Nord palette.
+// TNFX Nord: left-rail sections like the starship prompt. Only width-1 box characters sit before the
+// aligned column, so it stays straight whatever width the terminal gives Nerd Font icons.
+// The logo is CachyOS's icon, turned into a transparent PNG by install.sh and drawn as an image in kitty;
+// without it (other distros/terminals) fastfetch falls back to its text logo.
 {
     "$schema": "https://github.com/fastfetch-cli/fastfetch/raw/dev/doc/json_schema.json",
     "logo": {
-        "type": "small",
-        "color": { "1": "cyan", "2": "blue" },
-        "padding": { "top": 2, "left": 2, "right": 3 }
+        "type": "kitty",
+        "source": "~/.config/fastfetch/logo.png",
+        "width": 22,
+        "padding": { "top": 1, "left": 2, "right": 4 }
     },
     "display": {
-        "separator": " ",
-        "color": { "keys": "blue", "output": "white" }
+        "separator": "",
+        "color": { "keys": "white", "output": "white" }
     },
     "modules": [
-        { "type": "custom",  "key": "╭───────────╮" },
-        { "type": "title",   "key": "│ {#36} user    {#keys}│", "format": "{user-name}{#90}@{#0}{host-name}" },
-        { "type": "os",      "key": "│ {#36}{icon} distro  {#keys}│", "format": "{pretty-name}" },
-        { "type": "kernel",  "key": "│ {#36} kernel  {#keys}│" },
-        { "type": "uptime",  "key": "│ {#36}󰅐 uptime  {#keys}│" },
-        { "type": "packages","key": "│ {#36}󰏖 pkgs    {#keys}│" },
-        { "type": "custom",  "key": "├───────────┤" },
-        { "type": "de",      "key": "│ {#34}󰇄 desktop {#keys}│" },
-        { "type": "wm",      "key": "│ {#34} wm      {#keys}│" },
-        { "type": "terminal","key": "│ {#34} term    {#keys}│" },
-        { "type": "shell",   "key": "│ {#34} shell   {#keys}│" },
-        { "type": "custom",  "key": "├───────────┤" },
-        { "type": "cpu",     "key": "│ {#35}󰍛 cpu     {#keys}│", "format": "{name}" },
-        { "type": "gpu",     "key": "│ {#35}󰾲 gpu     {#keys}│", "format": "{name}" },
-        { "type": "memory",  "key": "│ {#35} memory  {#keys}│" },
-        { "type": "disk",    "key": "│ {#35}󰉉 disk    {#keys}│", "folders": "/" },
-        { "type": "battery", "key": "│ {#35} battery {#keys}│" },
-        { "type": "custom",  "key": "├───────────┤" },
-        { "type": "colors",  "key": "│ {#37} colors  {#keys}│", "symbol": "circle" },
-        { "type": "custom",  "key": "╰───────────╯" }
+        { "type": "title", "format": "{#1;36}{user-name}{#0;90} @ {#1;34}{host-name}" },
+        { "type": "custom", "format": "{#90}─────────────────────────────" },
+        { "type": "custom", "format": "{#36}╭─ {#1;36}system" },
+        { "type": "os",       "key": "{#36}│{#37}  distro    ", "format": "{pretty-name}" },
+        { "type": "kernel",   "key": "{#36}│{#37}  kernel    " },
+        { "type": "uptime",   "key": "{#36}│{#37}  uptime    " },
+        { "type": "packages", "key": "{#36}│{#37}  packages  " },
+        { "type": "custom", "format": "{#34}├─ {#1;34}desktop" },
+        { "type": "de",       "key": "{#34}│{#37}  plasma    ", "format": "{version}" },
+        { "type": "wm",       "key": "{#34}│{#37}  wm        " },
+        { "type": "terminal", "key": "{#34}│{#37}  terminal  " },
+        { "type": "shell",    "key": "{#34}│{#37}  shell     " },
+        { "type": "custom", "format": "{#35}├─ {#1;35}hardware" },
+        { "type": "cpu",      "key": "{#35}│{#37}  cpu       ", "format": "{name}" },
+        { "type": "gpu",      "key": "{#35}│{#37}  gpu       ", "format": "{name}" },
+        { "type": "memory",   "key": "{#35}│{#37}  memory    " },
+        { "type": "disk",     "key": "{#35}│{#37}  disk      ", "folders": "/", "format": "{size-used} / {size-total} ({size-percentage})" },
+        { "type": "battery",  "key": "{#35}│{#37}  battery   " },
+        { "type": "custom", "format": "{#35}╰─" },
+        "break",
+        { "type": "colors", "symbol": "circle", "paddingLeft": 2 }
     ]
 }

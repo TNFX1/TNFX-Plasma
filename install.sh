@@ -53,6 +53,11 @@ sed -i "s|<activity-id>|$activity_id|g" "$CONFIG_DIR/plasma-org.kde.plasma.deskt
 # The kitty look comes from fish + starship; a fresh user's login shell is often bash.
 command -v fish &>/dev/null && echo "shell fish" >> "$CONFIG_DIR/kitty/kitty.conf"
 
+# fastfetch logo: CachyOS's icon as a transparent PNG (the SVG renders on a white square).
+if [[ -f /usr/share/icons/cachyos.svg ]] && command -v rsvg-convert &>/dev/null; then
+    rsvg-convert -w 512 -h 512 /usr/share/icons/cachyos.svg -o "$CONFIG_DIR/fastfetch/logo.png"
+fi
+
 # Reload open kitty windows with the new config.
 pkill -USR1 -x kitty 2>/dev/null || true
 
