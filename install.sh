@@ -22,6 +22,12 @@ mkdir -p "$BACKUP_DIR"
 done
 echo "Backup: $BACKUP_DIR"
 
+# Desktops are bound to an activity UUID that differs per user; read this user's before copying.
+activity_id="$(qdbus6 org.kde.ActivityManager /ActivityManager/Activities CurrentActivity 2>/dev/null || true)"
+if [[ -z "$activity_id" ]]; then
+    activity_id="$(sed -n '/^\[activities\]/,/^\[/{s/^\([0-9a-f-]\{36\}\)=.*/\1/p}' "$CONFIG_DIR/kactivitymanagerdrc" 2>/dev/null | head -n1)"
+fi
+
 # plasmashell rewrites its panel/desktop config on exit, so it must be stopped before copying.
 was_running=false
 if pgrep -x plasmashell >/dev/null; then
@@ -40,6 +46,12 @@ cp "$REPO_DIR/wallpapers/"* "$SHARE_DIR/wallpapers/"
 grep -rlF "/home/<username>" "$REPO_DIR/config" | while read -r f; do
     sed -i "s|/home/<username>|$HOME|g" "$CONFIG_DIR/${f#"$REPO_DIR/config/"}"
 done
+
+# Empty activityId makes Plasma attach the desktop to the current activity.
+sed -i "s|<activity-id>|$activity_id|g" "$CONFIG_DIR/plasma-org.kde.plasma.desktop-appletsrc"
+
+# Reload open kitty windows with the new config.
+pkill -USR1 -x kitty 2>/dev/null || true
 
 # Make KWin and kded pick up the new settings without a relogin where possible.
 qdbus6 org.kde.KWin /KWin reconfigure 2>/dev/null || true

@@ -39,7 +39,7 @@ The script:
 
 1. Backs up every file it will overwrite to `~/.config-TNFX-Plasma-backup-<timestamp>/`.
 2. Stops plasmashell, because a running plasmashell writes its own panel layout back over the new one.
-3. Copies `config/` to `~/.config/`, and `local-share/` plus the wallpaper to `~/.local/share/`.
+3. Copies `config/` (including `kitty/kitty.conf`) to `~/.config/`, and `local-share/` plus the wallpaper to `~/.local/share/`, then binds the desktop to your current activity.
 4. Replaces `/home/<username>` with your home folder.
 5. Restarts plasmashell.
 
@@ -56,7 +56,7 @@ To undo, copy the backup folder back: `cp -r ~/.config-TNFX-Plasma-backup-<times
 ## Requirements
 
 - KDE Plasma 6 (tested on 6.7.5, CachyOS)
-- kitty, if you want the default terminal to work as configured
+- kitty and `JetBrainsMono Nerd Font`, if you want the default terminal to work as configured
 
 ## Licenses
 

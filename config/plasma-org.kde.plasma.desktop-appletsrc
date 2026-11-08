@@ -8,7 +8,7 @@ RightButton;NoModifier=org.kde.contextmenu
 [Containments][325]
 ItemGeometries-1670x939=
 ItemGeometriesHorizontal=
-activityId=c872036f-0cac-4a5e-b71f-34d5b248542e
+activityId=<activity-id>
 formfactor=0
 immutability=1
 lastScreen=0
@@ -270,7 +270,7 @@ AppletOrder=355;357
 [Containments][363]
 ItemGeometries-1920x1080=
 ItemGeometriesHorizontal=
-activityId=c872036f-0cac-4a5e-b71f-34d5b248542e
+activityId=<activity-id>
 formfactor=0
 immutability=1
 lastScreen=1
