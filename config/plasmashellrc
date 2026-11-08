@@ -1,10 +1,13 @@
+[PIMEventsPlugin]
+calendars=6,8
+
 [PlasmaViews][Panel 2]
 floating=1
 
 [PlasmaViews][Panel 2][Defaults]
 thickness=44
 
-[PlasmaViews][Panel 254]
+[PlasmaViews][Panel 326]
 alignment=132
 floating=1
 panelLengthMode=0
@@ -12,11 +15,11 @@ panelOpacity=2
 panelVisibility=0
 shell=org.kde.plasma.desktop
 
-[PlasmaViews][Panel 254][Defaults]
+[PlasmaViews][Panel 326][Defaults]
 offset=0
 thickness=32
 
-[PlasmaViews][Panel 281]
+[PlasmaViews][Panel 353]
 alignment=132
 floating=1
 panelLengthMode=1
@@ -24,7 +27,7 @@ panelOpacity=2
 panelVisibility=2
 shell=org.kde.plasma.desktop
 
-[PlasmaViews][Panel 281][Defaults]
+[PlasmaViews][Panel 353][Defaults]
 offset=0
 thickness=54
 

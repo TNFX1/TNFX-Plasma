@@ -106,9 +106,13 @@ ForegroundVisited=143,188,187
 
 [General]
 BrowserApplication=helium.desktop
+ColorScheme=UtterlyNord
 ColorSchemeHash=faaf5d0b6da1b5cb6a1d51987c1f844813d2a797
 TerminalApplication=kitty
 TerminalService=kitty.desktop
+XftAntialias=true
+XftHintStyle=hintslight
+XftSubPixel=rgb
 
 [Icons]
 Theme=breeze-dark
@@ -122,7 +126,7 @@ frameContrast=0.2
 [KFileDialog Settings]
 Allow Expansion=false
 Automatically select filename extension=true
-Breadcrumb Navigation=true
+Breadcrumb Navigation=false
 Decoration position=2
 Show Full Path=false
 Show Inline Previews=true
@@ -134,7 +138,7 @@ Sort directories first=true
 Sort hidden files last=false
 Sort reversed=false
 Speedbar Width=181
-View Style=Simple
+View Style=DetailTree
 
 [KScreen]
 ScreenScaleFactors=HDMI-A-1=1;eDP-1=1;

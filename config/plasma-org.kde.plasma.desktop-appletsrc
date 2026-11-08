@@ -5,8 +5,7 @@ RightButton;NoModifier=org.kde.contextmenu
 [ActionPlugins][1]
 RightButton;NoModifier=org.kde.contextmenu
 
-[Containments][253]
-ItemGeometries-1422x800=
+[Containments][325]
 ItemGeometries-1670x939=
 ItemGeometriesHorizontal=
 activityId=c872036f-0cac-4a5e-b71f-34d5b248542e
@@ -17,14 +16,11 @@ location=0
 plugin=org.kde.plasma.folder
 wallpaperplugin=org.kde.image
 
-[Containments][253][General]
-previews=false
-
-[Containments][253][Wallpaper][org.kde.image][General]
+[Containments][325][Wallpaper][org.kde.image][General]
 Image=file:///home/<username>/.local/share/wallpapers/Aritim-Dark-Wallpaper-1920x1080.jpg
 SlidePaths=/home/<username>/.local/share/wallpapers/,/usr/share/wallpapers/
 
-[Containments][254]
+[Containments][326]
 activityId=
 formfactor=2
 immutability=1
@@ -33,185 +29,216 @@ location=3
 plugin=org.kde.panel
 wallpaperplugin=org.kde.image
 
-[Containments][254][Applets][255]
+[Containments][326][Applets][327]
 immutability=1
-plugin=org.kde.plasma.kickoff
+plugin=org.kde.plasma.simplekickoff
 
-[Containments][254][Applets][255][Configuration]
-popupHeight=441
-popupWidth=607
+[Containments][326][Applets][327][Configuration]
+popupHeight=435
+popupWidth=650
 
-[Containments][254][Applets][255][Configuration][ConfigDialog]
+[Containments][326][Applets][327][Configuration][ConfigDialog]
 DialogHeight=630
 DialogWidth=810
 
-[Containments][254][Applets][255][Configuration][General]
+[Containments][326][Applets][327][Configuration][General]
 alphaSort=true
 favoritesPortedToKAstats=true
 icon=org.cachyos.hello
 systemFavorites=suspend\\,hibernate\\,reboot\\,shutdown
 
-[Containments][254][Applets][255][Configuration][Shortcuts]
+[Containments][326][Applets][327][Configuration][Shortcuts]
 global=Alt+F1
 
-[Containments][254][Applets][255][Shortcuts]
+[Containments][326][Applets][327][Shortcuts]
 global=Alt+F1
 
-[Containments][254][Applets][261]
+[Containments][326][Applets][328]
+immutability=1
+plugin=org.kde.plasma.marginsseparator
+
+[Containments][326][Applets][331]
+immutability=1
+plugin=org.kde.windowtitle
+
+[Containments][326][Applets][331][Configuration][ConfigDialog]
+DialogHeight=630
+DialogWidth=810
+
+[Containments][326][Applets][331][Configuration][General]
+containmentType=Plasma
+filterActivityInfo=false
+filterByScreen=true
+italicFont=true
+showIcon=false
+
+[Containments][326][Applets][332]
+immutability=1
+plugin=org.kde.plasma.marginsseparator
+
+[Containments][326][Applets][333]
 immutability=1
 plugin=org.kde.plasma.appmenu
 
-[Containments][254][Applets][261][Configuration][ConfigDialog]
-DialogHeight=630
-DialogWidth=810
-
-[Containments][254][Applets][262]
+[Containments][326][Applets][334]
 immutability=1
 plugin=org.kde.plasma.panelspacer
 
-[Containments][254][Applets][263]
+[Containments][326][Applets][335]
 immutability=1
 plugin=org.kde.plasma.marginsseparator
 
-[Containments][254][Applets][264]
+[Containments][326][Applets][336]
 immutability=1
 plugin=org.kde.plasma.digitalclock
 
-[Containments][254][Applets][264][Configuration]
+[Containments][326][Applets][336][Configuration]
 popupHeight=451
 popupWidth=810
 
-[Containments][254][Applets][264][Configuration][Appearance]
+[Containments][326][Applets][336][Configuration][Appearance]
 customDateFormat=ddd d MMM
 dateDisplayFormat=BesideTime
-dateFormat=longDate
-enabledCalendarPlugins=/usr/lib/qt/plugins/plasmacalendarplugins/astronomicalevents.so,/usr/lib/qt/plugins/plasmacalendarplugins/holidaysevents.so
+dateFormat=custom
+enabledCalendarPlugins=/usr/lib/qt/plugins/plasmacalendarplugins/astronomicalevents.so,/usr/lib/qt/plugins/plasmacalendarplugins/holidaysevents.so,holidaysevents,pimevents
 firstDayOfWeek=1
 showWeekNumbers=true
+use24hFormat=2
 
-[Containments][254][Applets][264][Configuration][ConfigDialog]
-DialogHeight=630
-DialogWidth=810
+[Containments][326][Applets][336][Configuration][ConfigDialog]
+DialogHeight=721
+DialogWidth=1227
 
-[Containments][254][Applets][265]
+[Containments][326][Applets][337]
 immutability=1
 plugin=org.kde.plasma.marginsseparator
 
-[Containments][254][Applets][266]
+[Containments][326][Applets][338]
 immutability=1
 plugin=org.kde.plasma.panelspacer
 
-[Containments][254][Applets][267]
+[Containments][326][Applets][339]
 immutability=1
 plugin=org.kde.netspeedWidget
 
-[Containments][254][Applets][267][Configuration][General]
+[Containments][326][Applets][339][Configuration][ConfigDialog]
+DialogHeight=630
+DialogWidth=810
+
+[Containments][326][Applets][339][Configuration][General]
 swapDownUp=true
 
-[Containments][254][Applets][268]
+[Containments][326][Applets][340]
 activityId=
 formfactor=0
 immutability=1
-lastScreen=-1
+lastScreen=0
 location=0
 plugin=org.kde.plasma.systemtray
 popupHeight=432
 popupWidth=432
 wallpaperplugin=org.kde.image
 
-[Containments][254][Applets][268][Applets][269]
+[Containments][326][Applets][340][Applets][341]
 immutability=1
 plugin=org.kde.kdeconnect
 
-[Containments][254][Applets][268][Applets][270]
-immutability=1
-plugin=org.kde.plasma.cameraindicator
-
-[Containments][254][Applets][268][Applets][271]
-immutability=1
-plugin=org.kde.plasma.clipboard
-
-[Containments][254][Applets][268][Applets][272]
-immutability=1
-plugin=org.kde.plasma.devicenotifier
-
-[Containments][254][Applets][268][Applets][273]
-immutability=1
-plugin=org.kde.plasma.manage-inputmethod
-
-[Containments][254][Applets][268][Applets][274]
-immutability=1
-plugin=org.kde.plasma.notifications
-
-[Containments][254][Applets][268][Applets][275]
+[Containments][326][Applets][340][Applets][342]
 immutability=1
 plugin=org.kde.plasma.keyboardindicator
 
-[Containments][254][Applets][268][Applets][276]
+[Containments][326][Applets][340][Applets][342][Configuration][ConfigDialog]
+DialogHeight=630
+DialogWidth=810
+
+[Containments][326][Applets][340][Applets][343]
 immutability=1
 plugin=org.kde.plasma.weather
 
-[Containments][254][Applets][268][Applets][276][Configuration][ConfigDialog]
+[Containments][326][Applets][340][Applets][343][Configuration][ConfigDialog]
 DialogHeight=630
 DialogWidth=810
 
-[Containments][254][Applets][268][Applets][276][Configuration][WeatherStation]
-placeDisplayName=Ordu, Turkey, TR
-placeInfo=Ordu, Turkey, TR|741100
+[Containments][326][Applets][340][Applets][343][Configuration][WeatherStation]
 provider=bbcukmet
 
-[Containments][254][Applets][268][Applets][277]
+[Containments][326][Applets][340][Applets][344]
 immutability=1
 plugin=org.kde.kscreen
 
-[Containments][254][Applets][268][Applets][278]
+[Containments][326][Applets][340][Applets][345]
 immutability=1
 plugin=org.kde.plasma.keyboardlayout
 
-[Containments][254][Applets][268][Applets][279]
+[Containments][326][Applets][340][Applets][346]
 immutability=1
 plugin=org.kde.plasma.networkmanagement
 
-[Containments][254][Applets][268][Applets][280]
+[Containments][326][Applets][340][Applets][347]
 immutability=1
 plugin=org.kde.plasma.volume
 
-[Containments][254][Applets][268][Applets][280][Configuration][General]
+[Containments][326][Applets][340][Applets][347][Configuration][General]
 migrated=true
 
-[Containments][254][Applets][268][Applets][287]
+[Containments][326][Applets][340][Applets][348]
 immutability=1
-plugin=org.kde.plasma.brightness
+plugin=org.kde.plasma.cameraindicator
 
-[Containments][254][Applets][268][Applets][288]
+[Containments][326][Applets][340][Applets][350]
+immutability=1
+plugin=org.kde.plasma.devicenotifier
+
+[Containments][326][Applets][340][Applets][351]
+immutability=1
+plugin=org.kde.plasma.manage-inputmethod
+
+[Containments][326][Applets][340][Applets][352]
+immutability=1
+plugin=org.kde.plasma.notifications
+
+[Containments][326][Applets][340][Applets][353]
+immutability=1
+plugin=org.kde.plasma.dwellclicker
+
+[Containments][326][Applets][340][Applets][359]
 immutability=1
 plugin=org.kde.plasma.battery
 
-[Containments][254][Applets][268][Applets][289]
+[Containments][326][Applets][340][Applets][360]
+immutability=1
+plugin=org.kde.plasma.brightness
+
+[Containments][326][Applets][340][Applets][361]
 immutability=1
 plugin=org.kde.plasma.bluetooth
 
-[Containments][254][Applets][268][Applets][289][Configuration][General]
-showNumberOfConnectedDevices=true
-
-[Containments][254][Applets][268][Applets][291]
+[Containments][326][Applets][340][Applets][362]
 immutability=1
 plugin=org.kde.plasma.mediacontroller
 
-[Containments][254][Applets][268][ConfigDialog]
+[Containments][326][Applets][340][Applets][364]
+immutability=1
+plugin=org.kde.plasma.clipboard
+
+[Containments][326][Applets][340][Applets][365]
+immutability=1
+plugin=org.kde.plasma.printmanager
+
+[Containments][326][Applets][340][ConfigDialog]
 DialogHeight=630
 DialogWidth=810
 
-[Containments][254][Applets][268][General]
-extraItems=org.kde.kdeconnect,org.kde.plasma.bluetooth,org.kde.plasma.cameraindicator,org.kde.plasma.clipboard,org.kde.plasma.devicenotifier,org.kde.plasma.manage-inputmethod,org.kde.plasma.mediacontroller,org.kde.plasma.notifications,org.kde.plasma.keyboardindicator,org.kde.kscreen,org.kde.plasma.keyboardlayout,org.kde.plasma.networkmanagement,org.kde.plasma.volume,org.kde.plasma.brightness,org.kde.plasma.weather,org.kde.plasma.battery
-hiddenItems=org.kde.plasma.brightness,Cachy-Update
-knownItems=org.kde.kdeconnect,org.kde.plasma.bluetooth,org.kde.plasma.cameraindicator,org.kde.plasma.clipboard,org.kde.plasma.devicenotifier,org.kde.plasma.manage-inputmethod,org.kde.plasma.mediacontroller,org.kde.plasma.notifications,org.kde.plasma.keyboardindicator,org.kde.plasma.weather,org.kde.kscreen,org.kde.plasma.battery,org.kde.plasma.brightness,org.kde.plasma.keyboardlayout,org.kde.plasma.networkmanagement,org.kde.plasma.volume
-shownItems=org.kde.plasma.weather,org.kde.plasma.battery
+[Containments][326][Applets][340][General]
+extraItems=org.kde.kdeconnect,org.kde.plasma.bluetooth,org.kde.plasma.keyboardindicator,org.kde.plasma.weather,org.kde.kscreen,org.kde.plasma.keyboardlayout,org.kde.plasma.networkmanagement,org.kde.plasma.volume,org.kde.plasma.cameraindicator,org.kde.plasma.devicenotifier,org.kde.plasma.manage-inputmethod,org.kde.plasma.mediacontroller,org.kde.plasma.notifications,org.kde.plasma.battery,org.kde.plasma.dwellclicker,org.kde.plasma.brightness,org.kde.plasma.clipboard,org.kde.plasma.printmanager
+hiddenItems=Cachy-Update,org.kde.plasma.brightness,org.kde.plasma.clipboard
+knownItems=org.kde.kdeconnect,org.kde.plasma.bluetooth,org.kde.plasma.keyboardindicator,org.kde.plasma.weather,org.kde.kscreen,org.kde.plasma.battery,org.kde.plasma.brightness,org.kde.plasma.keyboardlayout,org.kde.plasma.networkmanagement,org.kde.plasma.volume,org.kde.plasma.cameraindicator,org.kde.plasma.clipboard,org.kde.plasma.devicenotifier,org.kde.plasma.manage-inputmethod,org.kde.plasma.mediacontroller,org.kde.plasma.notifications,org.kde.plasma.dwellclicker,org.kde.plasma.printmanager
+shownItems=org.kde.plasma.battery
 
-[Containments][254][General]
-AppletOrder=255;261;262;263;264;265;266;267;268
+[Containments][326][General]
+AppletOrder=327;328;331;332;333;334;335;336;337;338;339;340
 
-[Containments][281]
+[Containments][353]
 activityId=
 formfactor=2
 immutability=1
@@ -220,31 +247,29 @@ location=4
 plugin=org.kde.panel
 wallpaperplugin=org.kde.image
 
-[Containments][281][Applets][283]
+[Containments][353][Applets][355]
 immutability=1
 plugin=org.kde.plasma.icontasks
 
-[Containments][281][Applets][283][Configuration][ConfigDialog]
-DialogHeight=630
-DialogWidth=810
-
-[Containments][281][Applets][283][Configuration][General]
+[Containments][353][Applets][355][Configuration][General]
 groupedTaskVisualization=2
-launchers=preferred://filemanager,preferred://browser,applications:steam.desktop,applications:discord.desktop
+launchers=preferred://filemanager,applications:zen.desktop,applications:steam.desktop,applications:discord.desktop
 maxStripes=1
 showOnlyCurrentActivity=true
 showOnlyCurrentDesktop=true
 showOnlyCurrentScreen=true
 wheelSkipMinimized=false
 
-[Containments][281][Applets][285]
+[Containments][353][Applets][357]
 immutability=1
 plugin=org.kde.plasma.trash
 
-[Containments][281][General]
-AppletOrder=283;285
+[Containments][353][General]
+AppletOrder=355;357
 
-[Containments][292]
+[Containments][363]
+ItemGeometries-1920x1080=
+ItemGeometriesHorizontal=
 activityId=c872036f-0cac-4a5e-b71f-34d5b248542e
 formfactor=0
 immutability=1
@@ -255,3 +280,4 @@ wallpaperplugin=org.kde.image
 
 [ScreenMapping]
 itemsOnDisabledScreens=
+screenMapping=

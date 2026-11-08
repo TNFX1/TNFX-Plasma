@@ -1,2 +1,10 @@
+[Libinput][13652][62738][Compx 2.4G Wireless Receiver]
+PointerAcceleration=-0.400
+PointerAccelerationProfile=1
+ScrollMethod=0
+
+[Libinput][13652][62887][Compx 2.4G Dual Mode Mouse]
+PointerAcceleration=-0.800
+
 [Mouse]
-cursorTheme=breeze_cursors
+cursorTheme=Breeze_Light

@@ -1,56 +1,33 @@
 # TNFX-Plasma
 
-TNFX-Plasma is a portable KDE Plasma 6 desktop appearance/configuration repository.
+A portable KDE Plasma 6 desktop configuration: Nord colors, Utterly-Round style, a floating top bar and a bottom dock.
 
 ## Preview
 
 ![TNFX-Plasma desktop](screenshots/desktop.png)
 
-## Author
+## What's inside
 
-Maintained by GitHub user: TNFX1
+| Part | Value |
+|------|-------|
+| Global theme | Utterly-Nord (bundled) |
+| Plasma style | Utterly-Round (bundled) |
+| Colors | UtterlyNord (bundled) |
+| Window decoration | Utterly-Round-Dark, Aurorae (bundled) |
+| Application style | Breeze |
+| Icons | Breeze Dark |
+| Cursor | Breeze Light |
+| Splash screen | CachyOS-Nord |
+| Widgets | Simple Kickoff, Window Title, Net Speed (bundled) |
+| Wallpaper | Aritim Dark (bundled, also used on the lock screen) |
+| KWin | Blur, inactive window translucency, 2 virtual desktops, tiling layout |
+| Default apps | Terminal: kitty, browser: Helium |
 
-## Configuration Overview
+Also included: keyboard shortcuts, window rules, mouse settings and GTK 3/4 settings matched to the Plasma look.
 
-This repository contains KDE Plasma 6 configuration files for desktop appearance and layout:
+Everything is copied straight from a working CachyOS / Plasma 6 setup. It includes `~/.config/kdedefaults/`, which holds the values the global theme applies. Without that folder the decoration and the splash fall back to defaults.
 
-- **Desktop Layout**: Configured plasma-org.kde.plasma.desktop-appletsrc with folder view containment
-- **Panel Configuration**: Bottom panel with application launcher, task manager, system tray, and clock
-- **Wallpaper**: Configured to use Aritim-Dark-Wallpaper-1920x1080.jpg (bundled in this repository)
-- **Appearance Settings**: 
-  - Look-and-Feel: Utterly-Nord (referenced, not bundled)
-  - Plasma Style: Breeze (referenced, not bundled)
-  - Color Scheme: Derived from Utterly-Nord
-  - Icon Theme: Breeze Dark
-  - Cursor Theme: Breeze Cursor
-  - Window Decoration: Aurorae engine
-  - Application Style: Breeze
-  - Font Configuration: System defaults
-- **GTK Settings**: Matched Breeze theme for GTK 3.0 and 4.0 applications
-- **KWin Configuration**: Effects enabled (blur, translucency, wobbly windows), VSYNC disabled, OpenGL 3.1
-- **Keyboard Shortcuts**: Custom shortcuts configured in kglobalshortcutsrc
-- **Global Settings**: kdeglobals and plasmashellrc configurations
-
-## Themes
-
-This repository contains **configuration references** to the following third-party themes. The actual theme assets are **NOT bundled** due to redistribution restrictions:
-
-- **Look-and-Feel Package**: [`Utterly-Nord`](https://store.kde.org/p/2135625/)
-- **Icon Theme**: `Breeze Dark` (typically part of `breeze-icons` package)
-- **Cursor Theme**: `Breeze Cursor` (default Plasma theme)
-
-Install these themes via KDE System Settings → Get New Look-and-Feel, or through your distribution's package manager before applying this configuration.
-
-## Bundled Assets
-
-The following assets **ARE included** in this repository:
-- Wallpaper: `wallpapers/Aritim-Dark-Wallpaper-1920x1080.jpg`
-- All KDE Plasma configuration files in the `config/` directory
-- GTK 3.0 and 4.0 settings configuration
-
-## Installation
-
-### Automatic Installation (Recommended)
+## Install
 
 ```bash
 git clone https://github.com/TNFX1/TNFX-Plasma.git
@@ -58,67 +35,32 @@ cd TNFX-Plasma
 ./install.sh
 ```
 
-The installation script will:
-1. Verify KDE Plasma 6 availability
-2. Backup existing configuration to `~/.config-TNFX-Plasma-backup-<timestamp>/`
-3. Copy configuration files to `~/.config/`
-4. Replace path placeholders with your actual `$HOME`
-5. Provide post-installation instructions
+The script:
 
-After installation, log out and back in, or run `plasmashell --replace` to apply changes.
+1. Backs up every file it will overwrite to `~/.config-TNFX-Plasma-backup-<timestamp>/`.
+2. Stops plasmashell, because a running plasmashell writes its own panel layout back over the new one.
+3. Copies `config/` to `~/.config/`, and `local-share/` plus the wallpaper to `~/.local/share/`.
+4. Replaces `/home/<username>` with your home folder.
+5. Restarts plasmashell.
 
-### Manual Installation
+After that, **log out and back in** so the cursor, GTK settings and shortcuts apply.
 
-1. Clone or copy this repository to your machine
-2. Backup current KDE config (recommended): `cp -r ~/.config ~/.config.backup`
-3. Copy config directory contents: `cp -r config/* ~/.config/` (merge gtk directories correctly)
-4. Replace all occurrences of `/home/<username>` in the copied configuration files with your actual `$HOME` path (e.g., `/home/youruser`)
-5. Install required themes (see "Themes" section above)
-6. Wallpaper is already bundled and configured; additional wallpapers can be added to `$HOME/.local/share/wallpapers/`
-7. Restart Plasma: log out and back in, or run `plasmashell --replace`
+To undo, copy the backup folder back: `cp -r ~/.config-TNFX-Plasma-backup-<timestamp>/. ~/.config/`
+
+## Optional
+
+- **Splash screen**: CachyOS-Nord comes from the `cachyos-nord-kde-theme-git` package. On other distros the default splash is used.
+- **Weather widget**: set your location from its settings.
+- **Displays**: `kdeglobals` and `kwinrc` include scaling for `eDP-1` / `HDMI-A-1` (XWayland scale 1.15). Adjust them in System Settings → Display if your screens differ.
 
 ## Requirements
 
-- KDE Plasma 6 (developed/tested on 6.7.5 on CachyOS)
-- Expected compatibility with other KDE Plasma 6 versions
-- Qt 6 and KDE Frameworks 6
-- Optional: `breeze-icons` for icon theme
-- Optional: Aurorae engine for window decoration (built-in)
+- KDE Plasma 6 (tested on 6.7.5, CachyOS)
+- kitty, if you want the default terminal to work as configured
 
-## Important Notes
+## Licenses
 
-- Some settings are machine/display/session dependent and may require adjustment after installation:
-  - Monitor-specific configurations
-  - Wallpaper paths (if using additional wallpapers)
-  - Color profiles
-  - KWin behavior affecting multi-monitor setups
-  - Hardware-specific behaviors
-- The repository does **not** intentionally contain passwords, API keys, private keys, network credentials, or personal data
-- This configuration focuses on visual appearance and desktop layout only
-- No system-wide changes are made; all modifications are user-specific
+The bundled themes and widgets are GPL. Each one keeps its own license file inside its folder under `local-share/`:
 
-## Repository Structure
-
-```
-TNFX-Plasma/
-├── config/
-│   ├── kdeglobals
-│   ├── plasmarc
-│   ├── plasmashellrc
-│   ├── kwinrc
-│   ├── plasma-org.kde.plasma.desktop-appletsrc
-│   ├── kglobalshortcutsrc
-│   ├── gtk-3.0/
-│   │   └── settings.ini
-│   └── gtk-4.0/
-│       └── settings.ini
-├── screenshots/
-│   └── desktop.png
-├── wallpapers/
-│   └── Aritim-Dark-Wallpaper-1920x1080.jpg
-└── install.sh
-```
-
-## License
-
-No license has currently been included for this repository. The configuration is provided as-is for reference and adaptation.
+- [Utterly-Nord / Utterly-Round](https://store.kde.org/p/2135625/) (GPL-2.0+)
+- Simple Kickoff (GPL-2.0+), Window Title (GPL-2.0), Net Speed Widget (GPL-2.0)
