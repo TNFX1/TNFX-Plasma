@@ -51,6 +51,7 @@ To undo, copy the backup folder back: `cp -r ~/.config-TNFX-Plasma-backup-<times
 
 - **Splash screen**: CachyOS-Nord comes from the `cachyos-nord-kde-theme-git` package. On other distros the default splash is used.
 - **Weather widget**: set your location from its settings.
+- **Lock screen**: if it does not pick up the wallpaper, set it in System Settings → Screen Locking → Appearance.
 - **Displays**: `kdeglobals` and `kwinrc` include scaling for `eDP-1` / `HDMI-A-1` (XWayland scale 1.15). Adjust them in System Settings → Display if your screens differ.
 
 ## Requirements
