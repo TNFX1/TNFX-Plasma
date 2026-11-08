@@ -1,0 +1,53 @@
+
+add_newline = true
+command_timeout = 1000
+
+format = """
+[╭─](bold #88c0d0)$username$hostname$directory$git_branch$git_status
+[╰─](bold #88c0d0)$character"""
+
+right_format = """$cmd_duration$time"""
+
+[username]
+show_always = true
+style_user = "bold #88c0d0"
+format = "[$user]($style)"
+
+[hostname]
+ssh_only = false
+format = "[@$hostname](bold #81a1c1) "
+
+[directory]
+style = "bold #d8dee9"
+format = "[$path]($style) "
+truncation_length = 3
+truncate_to_repo = true
+read_only = " 󰌾"
+
+[git_branch]
+symbol = " "
+style = "bold #b48ead"
+format = "[ $symbol$branch]($style) "
+
+[git_status]
+style = "#bf616a"
+format = "[$all_status$ahead_behind]($style) "
+
+[character]
+success_symbol = "[❯](bold #88c0d0)"
+error_symbol = "[❯](bold #bf616a)"
+vimcmd_symbol = "[❮](bold #a3be8c)"
+
+[cmd_duration]
+min_time = 1000
+format = "[󱑍 $duration ](#ebcb8b)"
+
+[time]
+disabled = false
+time_format = "%H:%M"
+format = "[ $time](bold #88c0d0)"
+
+[package]
+disabled = true
+EOF = ""
+

@@ -50,6 +50,9 @@ done
 # Empty activityId makes Plasma attach the desktop to the current activity.
 sed -i "s|<activity-id>|$activity_id|g" "$CONFIG_DIR/plasma-org.kde.plasma.desktop-appletsrc"
 
+# The kitty look comes from fish + starship; a fresh user's login shell is often bash.
+command -v fish &>/dev/null && echo "shell fish" >> "$CONFIG_DIR/kitty/kitty.conf"
+
 # Reload open kitty windows with the new config.
 pkill -USR1 -x kitty 2>/dev/null || true
 
