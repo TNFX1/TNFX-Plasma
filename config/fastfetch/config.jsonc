@@ -20,6 +20,7 @@
         { "type": "custom", "format": "{#36}╭─ {#1;36}system" },
         { "type": "os",       "key": "{#36}│{#37}  distro    ", "format": "{pretty-name}" },
         { "type": "kernel",   "key": "{#36}│{#37}  kernel    " },
+        { "type": "disk",     "key": "{#36}│{#37}  age       ", "folders": "/", "format": "{days} days (since {create-time:10})" },
         { "type": "uptime",   "key": "{#36}│{#37}  uptime    " },
         { "type": "packages", "key": "{#36}│{#37}  packages  " },
         { "type": "custom", "format": "{#34}├─ {#1;34}desktop" },
