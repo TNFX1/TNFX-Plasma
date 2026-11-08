@@ -58,7 +58,7 @@ To undo, copy the backup folder back: `cp -r ~/.config-TNFX-Plasma-backup-<times
 
 - KDE Plasma 6 (tested on 6.7.5, CachyOS)
 - kitty and `JetBrainsMono Nerd Font`, if you want the default terminal to work as configured
-- `fish`, `starship`, `eza` and `zoxide` for the terminal look (prompt, icons in `ls`); kitty is set to run fish if it is installed
+- `fastfetch`, `fish`, `starship`, `eza` and `zoxide` for the terminal look (prompt, icons in `ls`); kitty is set to run fish if it is installed
 
 ## Licenses
 
